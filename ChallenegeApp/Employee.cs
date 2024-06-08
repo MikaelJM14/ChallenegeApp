@@ -2,17 +2,19 @@
 
 namespace ChallenegeApp
 {
-    public class Employee : Person
+    public class Employee : IEmployee
     {
         private List<float> grades = new List<float>();
 
-        public Employee(string name, string surname,string sex)
-            : base(name, surname, sex)
+        public Employee(string name, string surname)
         {
             this.Name = name;
-            this.SurName = surname;
-            this.Sex = sex;
+            this.Surname = surname;
         }
+
+        public string Name { get; set; }
+
+        public string Surname {  get; set; }
 
         public void AddGrade(float grade)
         {

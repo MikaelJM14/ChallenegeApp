@@ -1,18 +1,15 @@
 ﻿namespace ChallenegeApp
 {
-    public class Person
+    public abstract class Person// : System.Object
     {
-        public Person(string name,string surname, string sex)
+        public Person(string name, string surname)
         {
             this.Name = name;
-            this.SurName = surname;
-            this.Sex = sex;
+            this.Surname = surname;
         }
 
         public string Name { get; set; }
 
-        public string SurName { get; set; }
-
-        public string Sex { get; set; }
+        public string Surname { get; set; }
     }
 }
