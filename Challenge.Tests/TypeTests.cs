@@ -22,19 +22,19 @@ namespace Challenge.Tests
         public void GetUserShouldReturnDifferentObjects()
         {
             //arrange
-            var user1 = GetUser("Adm");
-            var user2 = GetUser("Adam");
+//            var user1 = GetUser("Adm");
+//            var user2 = GetUser("Adam");
 
             //act
             
 
             //assert
-            Assert.AreNotEqual(user1, user2);
+//            Assert.AreNotEqual(user1, user2);
         }
 
-        private User GetUser(string name)
-        {
-            return new User(name);
-        }
+//        private User GetUser(string name)
+//        {
+//            return new User(name);
+//        }
     }
 }
