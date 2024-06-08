@@ -2,18 +2,17 @@
 
 namespace ChallenegeApp
 {
-    public class Employee
+    public class Employee : Person
     {
         private List<float> grades = new List<float>();
 
-        public Employee()
+        public Employee(string name, string surname,string sex)
+            : base(name, surname, sex)
         {
-            
+            this.Name = name;
+            this.SurName = surname;
+            this.Sex = sex;
         }
-
-        public string Name { get; private set; }
-
-        public string Surname { get; private set; }
 
         public void AddGrade(float grade)
         {
@@ -29,7 +28,7 @@ namespace ChallenegeApp
             }
             else
             {
-                Console.WriteLine("Invalid grade value");
+                throw new Exception("Invalid grade value");
             }
         }
 
@@ -66,8 +65,7 @@ namespace ChallenegeApp
                     this.grades.Add(20);
                     break;
                 default:
-                    Console.WriteLine("Wrong Letter");
-                    break;
+                    throw new Exception("Wrong Letter");
             }
         }
 
@@ -79,7 +77,7 @@ namespace ChallenegeApp
             }
             else
             {
-                Console.WriteLine("String was not float");
+                throw new Exception("String was not float");
             }
         }
 

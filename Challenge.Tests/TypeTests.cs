@@ -22,7 +22,7 @@ namespace Challenge.Tests
         public void GetUserShouldReturnDifferentObjects()
         {
             //arrange
-//            var user1 = GetUser("Adm");
+//            var user1 = GetUser("Adam");
 //            var user2 = GetUser("Adam");
 
             //act

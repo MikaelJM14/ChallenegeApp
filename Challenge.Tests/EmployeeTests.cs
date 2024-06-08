@@ -8,7 +8,7 @@ namespace Challenge.Tests
         public void WhenGetStatisticsCalled_ShouldReturnCorrectMax()
         {
             //arrange
-            var employee = new Employee("Adam","kamizlich");
+            var employee = new Employee("Adam", "kamizlich");
             employee.AddGrade(2);
             employee.AddGrade(2);
             employee.AddGrade(6);
