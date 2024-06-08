@@ -1,22 +1,24 @@
 ﻿using ChallenegeApp;
+using System.ComponentModel.DataAnnotations;
 
-var employee = new Employee("Adam", "Kamizelich");
-employee.AddGrade(9f);
-employee.AddGrade("4000");
-employee.AddGrade(2);
-employee.AddGrade(6);
+Console.WriteLine("Witamy w Programie XYZ do oceny pracowniekow");
+Console.WriteLine("=============================================");
+Console.WriteLine();
 
+var employee = new Employee();
 
+while (true)
+{
+    Console.WriteLine("Poday Kolejna ocene pracownika: ");
+    var input = Console.ReadLine();
+    if (input == "q")
+    {
+        break;
+    }
+    employee.AddGrade(input);
+}
 
-
-
-
-
-
-
-
-//var statictics = employee.GetStatistics();
-
-//Console.WriteLine($"Average: {statictics.Average:N2}");
-//Console.WriteLine($"Min: {statictics.Min}");
-//Console.WriteLine($"Max: {statictics.Max}");
+var statistics = employee.GetStatistics();
+Console.WriteLine($"Average: {statistics.Average}");
+Console.WriteLine($"Min: {statistics.Min}");
+Console.WriteLine($"Max: {statistics.Max}");

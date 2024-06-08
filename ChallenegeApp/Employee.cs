@@ -6,10 +6,9 @@ namespace ChallenegeApp
     {
         private List<float> grades = new List<float>();
 
-        public Employee(string name, string surname)
+        public Employee()
         {
-            this.Name = name;
-            this.Surname = surname;
+            
         }
 
         public string Name { get; private set; }
@@ -44,6 +43,32 @@ namespace ChallenegeApp
         {
             float gradeAsFloat = grade;
             this.AddGrade(gradeAsFloat);
+        }
+
+        public void AddGrade(char grade)
+        {
+            switch(grade)
+            {
+                case 'A':
+                case 'a':
+                    this.grades.Add(100);
+                    break;
+                case 'B':
+                    this.grades.Add(80);
+                    break;
+                case 'C':
+                    this.grades.Add(60);
+                    break;
+                case 'D':
+                    this.grades.Add(40);
+                    break;
+                case 'F':
+                    this.grades.Add(20);
+                    break;
+                default:
+                    Console.WriteLine("Wrong Letter");
+                    break;
+            }
         }
 
         public void AddGrade(string grade)
@@ -88,6 +113,26 @@ namespace ChallenegeApp
 
         here:
             statistics.Average /= this.grades.Count;
+
+            switch (statistics.Average)
+            {
+                case var a when a >= 80:
+                    statistics.AverageLetter = 'A';
+                    break;
+                case var b when b >= 60:
+                    statistics.AverageLetter = 'B';
+                    break;
+                case var c when c >= 40:
+                    statistics.AverageLetter = 'C';
+                    break;
+                case var d when d >= 20:
+                    statistics.AverageLetter = 'D';
+                    break;
+                default:
+                    statistics.AverageLetter = 'E';
+                    break;
+            }
+
             return statistics;
         }
     }    
