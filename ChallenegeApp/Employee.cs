@@ -50,24 +50,60 @@ namespace ChallenegeApp
         {
             switch(grade)
             {
-                case 'A':
-                case 'a':
-                    this.grades.Add(100);
-                    break;
-                case 'B':
-                    this.grades.Add(80);
-                    break;
-                case 'C':
-                    this.grades.Add(60);
-                    break;
-                case 'D':
-                    this.grades.Add(40);
-                    break;
-                case 'F':
-                    this.grades.Add(20);
-                    break;
-                default:
-                    throw new Exception("Wrong Letter");
+                case '6':
+                    this.AddGrade(95);
+            break;
+                case '@':
+                this.AddGrade(100);
+                break;
+            case 'f':
+                this.AddGrade(90);
+                break;
+            case '5':
+                this.AddGrade(85);
+                break;
+            case 'a':
+                this.AddGrade(90);
+                break;
+            case 's':
+                this.AddGrade(80);
+                break;
+            case '4':
+                this.AddGrade(75);
+                break;
+            case '=':
+                this.AddGrade(80);
+                break;
+            case '/':
+                this.AddGrade(70);
+                break;
+            case '3':
+                this.AddGrade(65);
+                break;
+            case '?':
+                this.AddGrade(70);
+                break;
+            case '#':
+                this.AddGrade(60);
+                break;
+            case '2':
+                this.AddGrade(55);
+                break;
+            case '+':
+                this.AddGrade(60);
+                break;
+            case '-':
+                this.AddGrade(50);
+                break;
+            case '1':
+                this.AddGrade(45);
+                break;
+            case '[':
+                this.AddGrade(50);
+                break;
+            case ']':
+                this.AddGrade(40);
+                break;
             }
         }
 

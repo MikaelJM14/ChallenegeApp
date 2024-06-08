@@ -28,63 +28,7 @@
 
         public void AddGrade(string grade)
         {
-            switch(grade)
-            {
-                case "6":
-                    this.AddGrade(95);
-                    break;
-                case "6+":
-                    this.AddGrade(100);
-                    break;
-                case "6-":
-                    this.AddGrade(90);
-                    break;
-                case "5":
-                    this.AddGrade(85);
-                    break;
-                case "5+":
-                    this.AddGrade(90);
-                    break;
-                case "5-":
-                    this.AddGrade(80);
-                    break;
-                case "4":
-                    this.AddGrade(75);
-                    break;
-                case "4+":
-                    this.AddGrade(80);
-                    break;
-                case "4-":
-                    this.AddGrade(70);
-                    break;
-                case "3":
-                    this.AddGrade(65);
-                    break;
-                case "3+":
-                    this.AddGrade(70);
-                    break;
-                case "3-":
-                    this.AddGrade(60);
-                    break;
-                case "2":
-                    this.AddGrade(55);
-                    break;
-                case "2+":
-                    this.AddGrade(60);
-                    break;
-                case "2-":
-                    this.AddGrade(50);
-                    break;
-                case "1":
-                    this.AddGrade(45);
-                    break;
-                case "1+":
-                    this.AddGrade(50);
-                    break;
-                case "1-":
-                    this.AddGrade(40);
-                    break;
-            }
+            throw new NotImplementedException();
         }
 
         public Statistics GetStatistics()
