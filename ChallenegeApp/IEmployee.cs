@@ -1,4 +1,5 @@
 ﻿using ChallenegeApp;
+using static ChallenegeApp.EmployeeBase;
 using static ChallenegeApp.EmployeeInMemory;
 
 namespace ChallenegeApp

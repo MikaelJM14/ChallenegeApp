@@ -4,7 +4,7 @@
     {
         public delegate void GradeAddedDelegate(object sender, EventArgs args);
 
-        public event GradeAddedDelegate GradeAdded;
+        event GradeAddedDelegate GradeAdded;
 
         public EmployeeBase(string name, string surname)
         {
@@ -12,7 +12,7 @@
             this.Surname = surname;
         }
 
-        event EmployeeInMemory.GradeAddedDelegate IEmployee.GradeAdded
+        event GradeAddedDelegate IEmployee.GradeAdded
         {
             add
             {
@@ -27,7 +27,7 @@
 
         public string Name { get; set; }
 
-        public string Surname { get; set; }
+        public string Surname { get; set; }    
 
         public abstract void AddGrade(float grade);
 

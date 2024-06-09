@@ -4,6 +4,8 @@
     {
         private const string fileName = "grades.txt";
 
+        public event GradeAddedDelegate GradeAdded;
+
         public EmployeeInFile(string name, string surname) 
             : base(name, surname)
         {
@@ -19,22 +21,34 @@
 
         public override void AddGrade(double grade)
         {
-            throw new NotImplementedException();
+            using (var writer = File.AppendText(fileName))
+            {
+                writer.WriteLine(grade);
+            }
         }
 
         public override void AddGrade(int grade)
         {
-            throw new NotImplementedException();
+            using (var writer = File.AppendText(fileName))
+            {
+                writer.WriteLine(grade);
+            }
         }
 
         public override void AddGrade(char grade)
         {
-            throw new NotImplementedException();
+            using (var writer = File.AppendText(fileName))
+            {
+                writer.WriteLine(grade);
+            }
         }
 
         public override void AddGrade(string grade)
         {
-            throw new NotImplementedException();
+            using (var writer = File.AppendText(fileName))
+            {
+                writer.WriteLine(grade);
+            }
         }
 
         public override Statistics GetStatistics()
