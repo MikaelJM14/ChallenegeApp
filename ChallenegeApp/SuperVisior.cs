@@ -6,6 +6,8 @@
 
         public string Surname => throw new NotImplementedException();
 
+        public event EmployeeInMemory.GradeAddedDelegate GradeAdded;
+
         public void AddGrade(float grade)
         {
             throw new NotImplementedException();

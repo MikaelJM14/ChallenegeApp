@@ -2,15 +2,34 @@
 {
     public class EmployeeInMemory : EmployeeBase // : IEmployee
     {
+        public delegate void GradeAddedDelegate(object sender, EventArgs args);
+
+
+        event GradeAddedDelegate GradeAdded;
+
+        private List<float> grades = new List<float>();
+
         public EmployeeInMemory(string name, string surname) 
             : base(name, surname)
         {
-
+            
         }
 
         public override void AddGrade(float grade)
         {
-            throw new NotImplementedException();
+            if (grade >= 0 && grade <= 100)
+            {
+                this.grades.Add(grade);
+
+                if(GradeAdded != null)
+                {
+                    GradeAdded(this, new EventArgs());
+                }
+            }
+            else
+            {
+                throw new Exception("Invalid grade value");
+            }
         }
 
         public override void AddGrade(double grade)

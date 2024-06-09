@@ -1,4 +1,6 @@
-﻿namespace ChallenegeApp
+﻿using static ChallenegeApp.EmployeeInMemory;
+
+namespace ChallenegeApp
 {
     public interface IEmployee
     {
@@ -15,6 +17,9 @@
         public void AddGrade(char grade);
 
         public void AddGrade(string grade);
+
+
+        event GradeAddedDelegate GradeAdded;
 
         Statistics GetStatistics();
     }

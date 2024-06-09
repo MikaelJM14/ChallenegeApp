@@ -12,6 +12,8 @@
 
         public string Surname { get; set; }
 
+        public event EmployeeInMemory.GradeAddedDelegate GradeAdded;
+
         public abstract void AddGrade(float grade);
 
         public abstract void AddGrade(double grade);
