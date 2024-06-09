@@ -4,7 +4,6 @@
     {
         public delegate void GradeAddedDelegate(object sender, EventArgs args);
 
-
         event GradeAddedDelegate GradeAdded;
 
         private List<float> grades = new List<float>();
@@ -21,7 +20,7 @@
             {
                 this.grades.Add(grade);
 
-                if(GradeAdded != null)
+                if (GradeAdded != null)
                 {
                     GradeAdded(this, new EventArgs());
                 }
